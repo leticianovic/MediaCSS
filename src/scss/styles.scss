@@ -1,0 +1,35 @@
+$color-font: #000;
+$color-bg-default: #33f;
+$font-default: Arial, Helvetica, sans-serif;
+
+body {
+    font-family: $font-default;
+    margin: 0;
+}
+
+h1 {
+    color: $color-font;
+    text-align: center;
+}
+
+
+.container {
+    display: grid;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    
+    img {
+        height: 200px;
+        width: auto;
+        border: 1px solid;
+        object-fit: fill;
+        object-position: center;
+
+        &:hover {
+            opacity: 60%;
+            border-color: #b63535;
+        }
+    }
+}
