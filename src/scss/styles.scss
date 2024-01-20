@@ -5,13 +5,49 @@ $font-default: Arial, Helvetica, sans-serif;
 body {
     font-family: $font-default;
     margin: 0;
+
+    #root {
+        margin-left: 12%;
+    }
 }
 
-h1 {
-    color: $color-font;
-    text-align: center;
-}
+header {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
 
+    .waves {
+        width: 100%;
+
+        path:nth-child(2) {
+            animation: wave1 12s ease-in-out 1s infinite reverse running;
+        }
+
+        path:nth-child(4) {
+            animation: wave2 12s ease-in-out 1s infinite running;
+        }
+    }
+
+    @keyframes wave1 {
+        from {
+            transform: translate(-400px)
+        }
+    }
+
+    @keyframes wave2 {
+        from {
+            transform: translate(-200px)
+        }
+    }
+    
+    text {
+        color: $color-font;
+        text-align: center;
+        font-size: 30px;
+        font-style: italic;
+        
+    }
+}
 
 .container {
     display: grid;
@@ -19,6 +55,7 @@ h1 {
     margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 5px;
+    justify-items: center;
     
     img {
         height: 200px;
@@ -31,5 +68,25 @@ h1 {
             opacity: 60%;
             border-color: #b63535;
         }
+    }
+}
+
+footer {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+
+    path:nth-child(1) {
+        stroke-dashoffset: 200;
+        stroke-dasharray: 170;
+        stroke: #862e02;
+        stroke-width: 4px;
+    }
+
+    path:nth-child(2) {
+        stroke-dashoffset: 80;
+        stroke-dasharray: 100;
+        stroke: #e0dae9;
+        stroke-width: 3px;
     }
 }
