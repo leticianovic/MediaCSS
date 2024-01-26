@@ -1,0 +1,84 @@
+$colorBlack: #000;
+$colorWhite: #FFF;
+$color1: #CCC;
+$color2: #DDD;
+
+#videos {
+    border: thick double $colorBlack;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+    h2 {
+        margin-left: 50px;
+        background-color: $colorBlack;
+        margin-right: 50px;
+        color: $color1;
+        display: flex;
+       justify-content: center ;
+    }
+
+    #player {
+        .fa {
+            font-size: 20px;
+        }
+
+        position: relative;
+        display: flex;
+        width: max-content;
+        height: max-content;
+        justify-content: center;
+        align-items: center;
+        margin: 4rem auto;
+        
+        video {
+            width: 600px;
+            height: auto;
+        }
+
+        .controls {
+            background-color: #333;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            opacity: .5;
+            transition: opacity .4s;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            button {
+                background: transparent;
+                color: $colorWhite;
+                font-weight: bolder;
+                text-shadow: 1px 1px 2px $colorBlack;
+                border: none;
+                cursor: pointer;
+            }
+
+            .timeline {
+                display: flex;
+                flex: 1;
+                align-items: center;
+                border: none;
+                border-right: 2px solid $color2;
+                border-left: 2px solid $color2;
+
+                .bar {
+                    background-color: #e00;
+                    height: 5px;
+                    flex: 1;
+
+                    .inner {
+                        background-color: $color1;
+                        width: 0;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

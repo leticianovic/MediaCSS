@@ -1,0 +1,41 @@
+$colorBlack: #000;
+$color1: #CCC;
+
+#images {
+    border: thick double $colorBlack;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+    h2 {
+        margin-left: 50px;
+        background-color: $colorBlack;
+        margin-right: 50px;
+        color: $color1;
+        display: flex;
+       justify-content: center ;
+    }
+
+    .container {
+        display: grid;
+        max-width: 100%;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5px;
+        justify-items: center;
+        margin-bottom: 20px;
+
+        img {
+            height: 200px;
+            width: auto;
+            border: 1px solid;
+            object-fit: fill;
+            object-position: center;    
+
+            &:hover {
+                opacity: 60%;
+                border-color: #b63535;
+            }
+        }
+    }
+}
